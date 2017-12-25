@@ -13,4 +13,4 @@ def recperms(max, loc, used):
 		if i not in used:
 			for num in recperms(max, loc-1, used+[i]):
 				list.append(num+makedig(i,loc))
-	return list;
+	return list
