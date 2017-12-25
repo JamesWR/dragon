@@ -13,7 +13,14 @@ def lessPrimary(X):
 	green = (0.5 + scalar) if (scalar < 0.5) else 0.5
 	return red, blue, green
 
+def bounce(X):
+	x = float(X*100.0)
+	if x % 2 < 1:
+		return 1.0, 0, 0
+	else:
+		return 0, 1.0 , 0
+
 def test():
 	for i in range(1,101):
 		print(lessPrimary(i/100.0))
-test()
+# test()

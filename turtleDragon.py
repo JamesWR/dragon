@@ -1,5 +1,5 @@
 import turtle
-import dragonColors as dc
+from . import dragonColors as dc
 def invert(list):
    newlist=[]
    for i in list:
@@ -20,9 +20,17 @@ def turtledragon1(level, t, size):
    for i in range(len(d)):
       t.forward(size)
       t.left(d[i])
-      t.color(dc.lessPrimary(float(i)/len(d)))
+      t.color(dc.bounce(float(i)/len(d)))
    t.forward(size)
    
+def turtledragonc(level, t, size):
+   d=dragon(level)
+   for i in range(len(d)):
+      t.forward(size)
+      t.left(d[i])
+      t.color(dc.bounce(float(i)/len(d)))
+   t.forward(size)
+
 def turtledragon2(level, t, size): 
    d=invert(dragon(level))
    for i in range(len(d)):
