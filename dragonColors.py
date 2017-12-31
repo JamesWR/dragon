@@ -18,7 +18,7 @@ def bounce(X):
 	if x % 2 < 1:
 		return 1.0, 0, 0
 	else:
-		return 0, 1.0 , 0
+		return 0 , 0, 1.0
 
 def test():
 	for i in range(1,101):

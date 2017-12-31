@@ -23,12 +23,12 @@ def turtledragon1(level, t, size):
       t.color(dc.bounce(float(i)/len(d)))
    t.forward(size)
    
-def turtledragonc(level, t, size):
+def turtledragonc(level, t, size, color):
    d=dragon(level)
    for i in range(len(d)):
       t.forward(size)
       t.left(d[i])
-      t.color(dc.bounce(float(i)/len(d)))
+      t.color(color(float(i)/len(d)))
    t.forward(size)
 
 def turtledragon2(level, t, size): 
